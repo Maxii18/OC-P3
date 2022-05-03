@@ -1,0 +1,54 @@
+@import "../sass/utils/mixins";
+
+#choice{
+    padding: 2rem;
+    ol{
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        counter-reset: numberLi;
+        @media (max-width: 920px){
+            flex-direction: column;
+        }
+        li{
+            font-size: .8rem;
+            background-color: var(--greyone);
+            margin-bottom: 1rem;
+            padding: 1.3rem 3rem;
+            border-radius: 1rem;
+            @include box-shadow-light;
+            transition: all 200ms ease-in-out;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            &:hover{
+                transform: scale(1.01);
+                @include box-shadow-button;
+                background-color:  #9256dc55;
+                i{
+                    color: var(--primaire);
+                }
+            }
+            // Créer un compteur en cas de rajout d'option
+            &::before{ 
+                content: counter(numberLi);
+                counter-increment: numberLi;
+                background-color: var(--primaire);
+                display: flex;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                margin-left: -4rem;
+            }
+            i{
+                font-size: 1.5rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+

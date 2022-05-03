@@ -1,0 +1,27 @@
+{
+  "name": "oc-p3",
+  "version": "1.0.0",
+  "description": "Projet 3 OpenClassroom",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch main.scss style.css",
+    "build": "postcss style.css -u autoprefixer cssnano -o ./build/style.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maxii18/OC-P3.git"
+  },
+  "author": "Maxime Leblond",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maxii18/OC-P3/issues"
+  },
+  "homepage": "https://github.com/Maxii18/OC-P3#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.6",
+    "cssnano": "^5.1.7",
+    "postcss": "^8.4.13",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.51.0"
+  }
+}

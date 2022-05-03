@@ -1,0 +1,14 @@
+@import "../sass/utils/mixins";
+
+#slogan {
+    text-align: center;
+    padding: 2rem 2rem;
+    background-color: var(--greytwo);
+    h1 {
+      margin-bottom: 1rem;
+    }
+}
+  
+#button button {
+  @include button;
+}

@@ -1,0 +1,28 @@
+footer{
+    background-color: #353535;
+    color: white;
+    padding: 2rem;
+    h3{
+        font-family: 'Shrikhand', sans-serif;
+        margin-bottom: 1rem;
+        @media (min-width: 900px) {
+            text-align: center;
+        }
+    }
+    #footer{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        @media (min-width: 900px) {
+            flex-direction: row;
+            justify-content: center;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            i{
+                margin-right: 1rem;
+            }
+        }
+    }
+}

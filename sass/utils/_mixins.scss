@@ -1,0 +1,48 @@
+@mixin box-shadow-light {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@mixin box-shadow-button{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+}
+
+@mixin box-shadow-button-hover{
+    box-shadow:  rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+}
+
+@mixin button {
+    $primaire:#9356dc;
+    $secondaire:#ff79da;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: none;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient($secondaire,$primaire);
+    @include box-shadow-button;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+        $primaire:#9256dcc7;
+        $secondaire:#ff79d9ba;
+        transform: scale(1.01);
+        @include box-shadow-button-hover;
+        background-image: linear-gradient($secondaire, $primaire);
+    }
+}
+
+@mixin generatorImg {
+    @for $i from 1 to 5 {
+        &.image-#{$i}{
+            background-image: url("../assets/restaurants/img#{$i}.jpg");
+            background-size: cover;
+            background-position: center;
+            border-radius: 1rem 1rem 0 0;
+            height: 14rem;
+        }
+    }
+}

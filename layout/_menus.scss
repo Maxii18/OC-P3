@@ -1,0 +1,81 @@
+@import "../sass/utils/mixins";
+
+.new{
+    position: relative;
+    &::before{
+        content: 'Nouveau';
+        position: absolute;
+        background-color: var(--tertiaire);
+        color: #2fbf96;
+        padding: .5rem 1rem;
+        top: 1rem;
+        right: 1rem;
+        border-radius: .2rem;
+    }
+}
+
+#restaurants{
+    background-color: var(--greytwo);
+    padding: 2rem;
+    h2{
+        @media (max-width:610px){
+            margin-bottom: 1rem;
+        }
+    }
+    #card-restaurants{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        @media (max-width: 610px){
+            grid-template-columns: 1fr;
+        }
+    }
+    .card{
+        border-radius: 1rem;
+        @include box-shadow-light;
+        transition: all 200ms;
+        margin: 1rem;
+        @media (max-width:610px){
+            margin: 0;
+            margin-bottom: 1rem;
+        }
+        &__image{
+            @include generatorImg;
+        }
+        &:hover{
+            transform: scale(1.01);
+            @include box-shadow-button;
+        }
+        &__description{
+            margin: .5rem 1rem;
+            padding-bottom: 1rem;
+            position: relative;
+            i{
+                font-size: 2rem;
+                position: absolute;
+                right: .7rem;
+                margin-top: -2.2rem;
+            }
+            .fa-regular{
+                cursor: pointer;
+                z-index: 1;
+            }
+            .fa-solid{
+                background-image: linear-gradient(var(--primaire), var(--secondaire));
+                color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+                cursor: pointer;
+                opacity: 0;
+                transition: all 500ms;
+            }
+            &__heart{
+                &:hover .fa-regular{
+                    opacity: 0;
+                }
+                &:hover .fa-solid{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

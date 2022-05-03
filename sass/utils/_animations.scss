@@ -1,0 +1,46 @@
+// Animation de la validation du menu 
+@mixin rotate {
+    @keyframes rotate {
+        0%{
+            transform: rotate(-270deg);
+        }
+        100%{
+            transform: rotate(0);
+        }
+    }
+}
+
+// Animation de la fleche retour des restaurants
+@mixin translateX {
+    @keyframes translateX {
+        0%{
+            transform: translateX(0.25rem);
+        }
+        66%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(0.25rem);
+        }
+    }
+    animation-name: translateX;
+    animation-duration: 900ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+// Animation des menus
+@mixin effect {
+    @keyframes effect {
+        0%{
+            transform: translateY(-2rem);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    animation-name: effect;
+    animation-duration: 1000ms;
+}
