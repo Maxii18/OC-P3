@@ -34,7 +34,6 @@
         background-image: linear-gradient($secondaire, $primaire);
     }
 }
-
 @mixin generatorImg {
     @for $i from 1 to 5 {
         &.image-#{$i}{
